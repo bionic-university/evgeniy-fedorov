@@ -11,3 +11,6 @@ services:
     newsletter_manager:
         class:     "%newsletter_manager.class%"
         arguments: ["@my_mailer"]
+
+    name_helper:
+       class:  Acme\StoreBundle\Helpers

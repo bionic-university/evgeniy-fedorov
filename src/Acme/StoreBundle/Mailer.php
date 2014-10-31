@@ -1,4 +1,5 @@
 <?php
+
 namespace Acme\StoreBundle;
 
 class Mailer

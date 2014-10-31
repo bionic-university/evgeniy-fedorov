@@ -5,8 +5,8 @@ namespace Acme\StoreBundle\Controller;
 use Acme\StoreBundle\Entity\Product;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
-use Acme\StoreBundle\Mailer;
-use Acme\StoreBundle\Newsletter\NewsletterManager;
+//use Acme\StoreBundle\Mailer;
+//use Acme\StoreBundle\Newsletter\NewsletterManager;
 
 class DefaultController extends Controller
 {
@@ -55,18 +55,21 @@ class DefaultController extends Controller
     }
 
     public function servicesAction(){
-        //        direct call to mailer
-//        $mailer = new Mailer('swiftmailer');
+        //direct call to mailer
+        //$mailer = new Mailer('swiftmailer');
 
-//        call to mailer via service
+        //call to mailer via service
         $mailer = $this->get('my_mailer');
         $mailer->send('ryan@foobar.net');
 
-//          direct call to newsletter manager
-//        $newsletter = new NewsletterManager($mailer);
+        //direct call to newsletter manager
+        //$newsletter = new NewsletterManager($mailer);
 
-//        call to newslettermanger via service
+        //call to newslettermanger via service
         $newsletter_manager = $this->get('newsletter_manager');
+
+        $name_helper=$this->get('name_helper');
+        echo $name_helper->firstNameToUpperCase('John C. Reily');
 
         return new Response('');
     }
