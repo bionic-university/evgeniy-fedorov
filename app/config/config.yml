@@ -1,6 +1,7 @@
 imports:
     - { resource: parameters.yml }
     - { resource: security.yml }
+    - { resource: "@AcmeStoreBundle/Resources/config/services.yml" }
 
 framework:
     #esi:             ~
@@ -70,8 +71,3 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
-
-services:
-    my_mailer:
-        class:        Acme\StoreBundle\Mailer
-        arguments:    [sendmail]
