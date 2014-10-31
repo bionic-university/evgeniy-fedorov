@@ -6,6 +6,7 @@ use Acme\StoreBundle\Entity\Product;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 use Acme\StoreBundle\Mailer;
+use Acme\StoreBundle\Newsletter;
 
 class DefaultController extends Controller
 {
@@ -36,6 +37,9 @@ class DefaultController extends Controller
         //call to mailer via service
         $mailer = $this->get('my_mailer');
         $mailer->send('ryan@foobar.net');
+
+        $mailer = $this->get('my_mailer');
+        $newsletter = new NewsletterManager($mailer);
 
         $product = $this->getDoctrine()->getRepository('AcmeStoreBundle:Product')->find($id);
 
