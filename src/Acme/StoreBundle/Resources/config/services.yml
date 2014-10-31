@@ -1,8 +1,13 @@
 parameters:
     my_mailer.class:      Acme\StoreBundle\Mailer
     my_mailer.transport:  sendmail
+    newsletter_manager.class: Acme\StoreBundle\Newsletter\NewsletterManager
 
 services:
     my_mailer:
         class:        "%my_mailer.class%"
         arguments:    ["%my_mailer.transport%"]
+
+    newsletter_manager:
+        class:     "%newsletter_manager.class%"
+        arguments: ["@my_mailer"]

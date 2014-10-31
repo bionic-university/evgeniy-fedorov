@@ -31,16 +31,6 @@ class DefaultController extends Controller
 
     public function showAction($id)
     {
-        //direct call to mailer
-        $mailer = new Mailer('swiftmailer');
-
-        //call to mailer via service
-        $mailer = $this->get('my_mailer');
-        $mailer->send('ryan@foobar.net');
-
-        $mailer = $this->get('my_mailer');
-        $newsletter = new NewsletterManager($mailer);
-
         $product = $this->getDoctrine()->getRepository('AcmeStoreBundle:Product')->find($id);
 
         if (!$product) {
@@ -62,5 +52,22 @@ class DefaultController extends Controller
         $products = $query->getResult();
 
         return new Response('Found ' . count($products) . ' products by your criteria');
+    }
+
+    public function servicesAction(){
+        //        direct call to mailer
+//        $mailer = new Mailer('swiftmailer');
+
+//        call to mailer via service
+        $mailer = $this->get('my_mailer');
+        $mailer->send('ryan@foobar.net');
+
+//          direct call to newsletter manager
+//        $newsletter = new NewsletterManager($mailer);
+
+//        call to newslettermanger via service
+        $newsletter_manager = $this->get('newsletter_manager');
+
+        return new Response('');
     }
 }

@@ -1,3 +1,7 @@
+acme_store_services:
+    path: /services
+    defaults: { _controller: AcmeStoreBundle:Default:services }
+
 acme_store_create_product:
     path:     /create-product
     defaults: { _controller: AcmeStoreBundle:Default:create }
