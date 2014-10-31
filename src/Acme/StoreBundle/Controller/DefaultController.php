@@ -6,7 +6,7 @@ use Acme\StoreBundle\Entity\Product;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 use Acme\StoreBundle\Mailer;
-use Acme\StoreBundle\Newsletter;
+use Acme\StoreBundle\Newsletter\NewsletterManager;
 
 class DefaultController extends Controller
 {

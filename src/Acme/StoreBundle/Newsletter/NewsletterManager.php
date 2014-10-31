@@ -17,6 +17,7 @@ class NewsletterManager {
     public function __construct(Mailer $mailer)
     {
         $this->mailer = $mailer;
+        echo "NewsletterManager instantiated<br />";
     }
 
 
