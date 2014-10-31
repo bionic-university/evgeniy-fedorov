@@ -48,7 +48,7 @@ doctrine:
         driver:   "pdo_mysql"
         host:     "localhost"
         port:     "8889"
-        dbname:   "symfony-lynda"
+        dbname:   "test_project"
         user:     "root"
         password: "root"
         charset:  UTF8
@@ -70,3 +70,8 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+services:
+    my_mailer:
+        class:        Acme\StoreBundle\Mailer
+        arguments:    [sendmail]

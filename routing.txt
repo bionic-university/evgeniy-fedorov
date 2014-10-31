@@ -1,0 +1,33 @@
+[32m[router][39m Current routes
+ [32mName                        [39m [32mMethod[39m [32mScheme[39m [32mHost[39m [32mPath                             [39m 
+ _wdt                         ANY    ANY    ANY  /_wdt/{token}                     
+ _profiler_home               ANY    ANY    ANY  /_profiler/                       
+ _profiler_search             ANY    ANY    ANY  /_profiler/search                 
+ _profiler_search_bar         ANY    ANY    ANY  /_profiler/search_bar             
+ _profiler_purge              ANY    ANY    ANY  /_profiler/purge                  
+ _profiler_info               ANY    ANY    ANY  /_profiler/info/{about}           
+ _profiler_phpinfo            ANY    ANY    ANY  /_profiler/phpinfo                
+ _profiler_search_results     ANY    ANY    ANY  /_profiler/{token}/search/results 
+ _profiler                    ANY    ANY    ANY  /_profiler/{token}                
+ _profiler_router             ANY    ANY    ANY  /_profiler/{token}/router         
+ _profiler_exception          ANY    ANY    ANY  /_profiler/{token}/exception      
+ _profiler_exception_css      ANY    ANY    ANY  /_profiler/{token}/exception.css  
+ _configurator_home           ANY    ANY    ANY  /_configurator/                   
+ _configurator_step           ANY    ANY    ANY  /_configurator/step/{index}       
+ _configurator_final          ANY    ANY    ANY  /_configurator/final              
+ z01d_demo_homepage           ANY    ANY    ANY  /random/{limit}                   
+ lynda_magazine_default_index ANY    ANY    ANY  /hello/{name}                     
+ issue                        GET    ANY    ANY  /issue/                           
+ issue_create                 POST   ANY    ANY  /issue/                           
+ issue_new                    GET    ANY    ANY  /issue/new                        
+ issue_show                   GET    ANY    ANY  /issue/{id}                       
+ issue_edit                   GET    ANY    ANY  /issue/{id}/edit                  
+ issue_update                 PUT    ANY    ANY  /issue/{id}                       
+ issue_delete                 DELETE ANY    ANY  /issue/{id}                       
+ publication                  GET    ANY    ANY  /publication/                     
+ publication_create           POST   ANY    ANY  /publication/                     
+ publication_new              GET    ANY    ANY  /publication/new                  
+ publication_show             GET    ANY    ANY  /publication/{id}                 
+ publication_edit             GET    ANY    ANY  /publication/{id}/edit            
+ publication_update           PUT    ANY    ANY  /publication/{id}                 
+ publication_delete           DELETE ANY    ANY  /publication/{id}                 

@@ -1,3 +1,11 @@
+acme_store:
+    resource: "@AcmeStoreBundle/Resources/config/routing.yml"
+    prefix:   /
+
+z01d_demo:
+    resource: "@Z01dDemoBundle/Resources/config/routing.yml"
+    prefix:   /
+
 lynda_magazine:
     resource: "@LyndaMagazineBundle/Controller/"
     type:     annotation

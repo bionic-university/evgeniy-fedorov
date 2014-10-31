@@ -1,6 +1,9 @@
 .idea
+app/config/parameters.yml
 *UPGRADE*.md
 *LICENSE
+
+
 /web/bundles/
 /app/bootstrap.php.cache
 /app/cache/*

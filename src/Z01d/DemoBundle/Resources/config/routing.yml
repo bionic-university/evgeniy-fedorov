@@ -1,0 +1,3 @@
+z01d_demo_homepage:
+    path:     /random/{limit}
+    defaults: { _controller: Z01dDemoBundle:Random:index}
